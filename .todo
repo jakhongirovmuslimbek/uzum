@@ -1,0 +1,182 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1705567006945,
+        "children": [
+          {
+            "key": 1705567022943,
+            "children": [],
+            "todo": {
+              "content": "Category",
+              "id": 1705567022943,
+              "level": "default",
+              "done": true,
+              "start": 1705567022943,
+              "focus": false,
+              "end": 1705568577056
+            }
+          },
+          {
+            "key": 1705567038248,
+            "children": [],
+            "todo": {
+              "content": "SubCategory",
+              "id": 1705567038248,
+              "level": "default",
+              "done": true,
+              "start": 1705567038248,
+              "focus": false,
+              "end": 1705568583332
+            }
+          },
+          {
+            "key": 1705567054610,
+            "children": [],
+            "todo": {
+              "content": "Tag",
+              "id": 1705567054610,
+              "level": "default",
+              "done": true,
+              "start": 1705567054610,
+              "focus": false,
+              "end": 1705568587339
+            }
+          },
+          {
+            "key": 1705567072961,
+            "children": [],
+            "todo": {
+              "content": "Seller",
+              "id": 1705567072961,
+              "level": "default",
+              "done": true,
+              "start": 1705567072961,
+              "focus": false,
+              "end": 1705568592632
+            }
+          },
+          {
+            "key": 1705567086371,
+            "children": [],
+            "todo": {
+              "content": "Product",
+              "id": 1705567086371,
+              "level": "default",
+              "done": true,
+              "start": 1705567086371,
+              "focus": false,
+              "end": 1705568597119
+            }
+          },
+          {
+            "key": 1705567094592,
+            "children": [],
+            "todo": {
+              "content": "Size",
+              "id": 1705567094592,
+              "level": "default",
+              "done": true,
+              "start": 1705567094592,
+              "focus": false,
+              "end": 1705568600533
+            }
+          },
+          {
+            "key": 1705567099454,
+            "children": [],
+            "todo": {
+              "content": "ProductImage",
+              "id": 1705567099454,
+              "level": "default",
+              "done": true,
+              "start": 1705567099454,
+              "focus": false,
+              "end": 1705568604428
+            }
+          },
+          {
+            "key": 1705567117629,
+            "children": [],
+            "todo": {
+              "content": "Liked",
+              "id": 1705567117629,
+              "level": "default",
+              "done": false,
+              "start": 1705567117629
+            }
+          },
+          {
+            "key": 1705568067460,
+            "children": [],
+            "todo": {
+              "content": "BannerImage",
+              "id": 1705568067460,
+              "level": "default",
+              "done": true,
+              "start": 1705568067460,
+              "focus": false,
+              "end": 1705568615015
+            }
+          },
+          {
+            "key": 1705568079319,
+            "children": [],
+            "todo": {
+              "content": "Search",
+              "id": 1705568079319,
+              "level": "default",
+              "done": false,
+              "start": 1705568079320
+            }
+          }
+        ],
+        "todo": {
+          "content": "Products -- app",
+          "id": 1705567006945,
+          "level": "default",
+          "done": false,
+          "start": 1705567006946
+        }
+      },
+      {
+        "key": 1705568116515,
+        "children": [],
+        "todo": {
+          "content": "Orders -- app",
+          "id": 1705568116515,
+          "level": "default",
+          "done": false,
+          "start": 1705568116515
+        }
+      },
+      {
+        "key": 1705568128121,
+        "children": [],
+        "todo": {
+          "content": "Users -- app",
+          "id": 1705568128121,
+          "level": "default",
+          "done": false,
+          "start": 1705568128121
+        }
+      }
+    ],
+    "expandKeys": [
+      1705567022943,
+      1705567006945
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "timelines": [],
+    "showLine": false,
+    "playFontSize": 24,
+    "title": ".todo",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1705568615275"
+  }
+}

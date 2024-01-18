@@ -6,6 +6,7 @@ from django.utils.text import slugify
 from imagekit.models import ImageSpecField
 from imagekit.processors import Transpose
 
+
 class Category(models.Model):
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(editable=False)
@@ -47,3 +48,75 @@ class Tag(models.Model):
     
     def __str__(self):
         return self.title
+
+class Seller(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name 
+
+class Product(models.Model):
+    category = models.ForeignKey(Category, related_name="products", on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, related_name="products", on_delete=models.CASCADE, blank=True, null=True)
+    tag = models.ForeignKey(Tag, related_name="products", on_delete=models.CASCADE, blank=True, null=True)
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    price = models.FloatField(default=0)
+    amount = models.IntegerField(default=0)
+    image = models.FileField(upload_to="images/products")
+    created_date = models.DateTimeField(auto_now_add=True)
+    seller = models.ForeignKey(Seller, related_name="seller", on_delete=models.CASCADE)
+
+    def credit_payment(self):
+        yearly_percentage = 44
+        per_month = (self.price * (1 + yearly_percentage/100)) / 12
+        return per_month 
+
+    def __str__(self):
+        return self.title 
+
+class Size(models.Model):
+    product = models.ForeignKey(Product, related_name="sizes", on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return f"size for {self.product.title}"
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, related_name="images", on_delete=models.CASCADE)
+    image = models.FileField(upload_to="images/products")
+
+    def __str__(self):
+        return f"image for {self.product.title}"
+    
+# class Liked(models.Model):
+#     user = models.ForeignKey(User, related_name="likes_list", on_delete=models.CASCADE)
+#     product = models.ForeignKey(Product, related_name="likes", on_delete=models.CASCADE)
+#     liked_date = models.DateTimeField(auto_now_add=True)
+    
+class BannerImage(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.FileField(upload_to="images/banner-images")
+
+    def __str__(self):
+        return self.title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
