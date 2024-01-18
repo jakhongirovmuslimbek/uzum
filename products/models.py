@@ -63,9 +63,15 @@ class Product(models.Model):
     description = models.TextField()
     price = models.FloatField(default=0)
     amount = models.IntegerField(default=0)
-    image = models.FileField(upload_to="images/products")
     created_date = models.DateTimeField(auto_now_add=True)
     seller = models.ForeignKey(Seller, related_name="seller", on_delete=models.CASCADE)
+    image = models.FileField(upload_to="images/products")
+    thumbnail_image = ImageSpecField(
+        source= 'image',
+        processors= [Transpose(),],
+        format= 'JPEG',
+        options= {'quality': 30}
+    )
 
     def credit_payment(self):
         yearly_percentage = 44
@@ -85,7 +91,13 @@ class Size(models.Model):
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, related_name="images", on_delete=models.CASCADE)
     image = models.FileField(upload_to="images/products")
-
+    thumbnail_image = ImageSpecField(
+        source= 'image',
+        processors= [Transpose(),],
+        format= 'JPEG',
+        options= {'quality': 30}
+    )
+    
     def __str__(self):
         return f"image for {self.product.title}"
     
@@ -97,6 +109,12 @@ class ProductImage(models.Model):
 class BannerImage(models.Model):
     title = models.CharField(max_length=255)
     image = models.FileField(upload_to="images/banner-images")
+    thumbnail_image = ImageSpecField(
+        source= 'image',
+        processors= [Transpose(),],
+        format= 'JPEG',
+        options= {'quality': 30}
+    )
 
     def __str__(self):
         return self.title
